@@ -29,7 +29,7 @@
             <RowDefinition Height="20"/>
 
         </Grid.RowDefinitions>
-        <TextBox x:Name="Results" Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Text="resultat" FontSize="45" HorizontalAlignment="Center" FontWeight="Bold" MinWidth="150"  ></TextBox>
+        <TextBox x:Name="Results" Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Text="resultat" FontSize="45" HorizontalAlignment="Center" FontWeight="Bold" MinWidth="170"  ></TextBox>
 
         <Button Style="{StaticResource Allbuttons}" x:Name="One" Grid.Column="1" Grid.Row="2"  Width ="auto" Click="One_Click">1</Button>
         <Button Style="{StaticResource Allbuttons}" x:Name="Two" Grid.Column="2" Grid.Row="2" Width ="auto" Click="Two_Click">2</Button>

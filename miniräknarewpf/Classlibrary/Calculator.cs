@@ -10,61 +10,62 @@ namespace miniräknarewpf.Classlibrary
     {
         public string Calculate(string results)
         {
-            List<string> expression = interpretexpression(results);
+            List<string> expression = InterpretExpression(results);
             return DoExpression(expression);
 
         }
-        public List<string> interpretexpression(string results)
+        public List<string> InterpretExpression(string results)
         {
- 
+
             string operations = "";
-            string firstsum = "";
-            string secondsum = "";
+            string firstSum = "";
+            string secondSum = "";
+            List<char> operators = new List<char> { '*', '/', '+', '-' };
             for (int i = 0; i < results.Length; i++)
             {
-                if (results[i] == '*' || results[i] == '/' || results[i] == '+' || results[i] == '-')
+                if (operators.Contains(results[i]))
                 {
                     operations = results[i].ToString();
                     continue;
                 }
-               else if (string.IsNullOrEmpty(operations))
+                else if (string.IsNullOrEmpty(operations))
                 {
-                    firstsum += results[i].ToString();
+                    firstSum += results[i].ToString();
                 }
                 else
                 {
-                    secondsum += results[i].ToString();
+                    secondSum += results[i].ToString();
                 }
             }
-            return new List<string> { firstsum, secondsum, operations };
+            return new List<string> { firstSum, secondSum, operations };
         }
         public string DoExpression(List<string> expression)
         {
-            string firstsum = expression[0];
-            string secondsum = expression[1];
-            string operaton = expression[2];
+            string firstSum = expression[0];
+            string secondSum = expression[1];
+            string operation = expression[2];
 
-            switch (operaton)
+            switch (operation)
             {
                 case "*":
                     {
-                        return (int.Parse(firstsum) * int.Parse(secondsum)).ToString();
+                        return (double.Parse(firstSum) * double.Parse(secondSum)).ToString();
                     }
                 case "/":
                     {
-                        return (int.Parse(firstsum) / int.Parse(secondsum)).ToString();
+                        return (double.Parse(firstSum) / double.Parse(secondSum)).ToString();
                     }
                 case "+":
                     {
-                        return (int.Parse(firstsum) + int.Parse(secondsum)).ToString();
+                        return (double.Parse(firstSum) + double.Parse(secondSum)).ToString();
                     }
                 case "-":
                     {
-                        return (int.Parse(firstsum) - int.Parse(secondsum)).ToString();
+                        return (double.Parse(firstSum) - double.Parse(secondSum)).ToString();
                     }
                 default:
                     return "0";
-               
+
             }
         }
     }
