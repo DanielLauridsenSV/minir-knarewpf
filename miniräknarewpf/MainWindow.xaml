@@ -1,12 +1,13 @@
 ﻿<Window x:Class="miniräknarewpf.MainWindow"
+        Style="{StaticResource Bakgrund}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:miniräknarewpf"
-        mc:Ignorable="d" FontWeight="DemiBold" FontSize="17"
-        FontFamily ="
-        Title="MainWindow" Height="300" Width="300">
+        mc:Ignorable="d" FontWeight="DemiBold" FontSize="17" BorderBrush="LightGray"
+        Title="Miniräknare" Height="200" Width="250">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -16,7 +17,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
-            
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -28,23 +29,23 @@
             <RowDefinition Height="20"/>
 
         </Grid.RowDefinitions>
-        <TextBox x:Name="Results" Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Text="resultat" FontSize="45" HorizontalAlignment="Center" FontWeight="Bold"   > </TextBox>
+        <TextBox x:Name="Results" Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Text="resultat" FontSize="45" HorizontalAlignment="Center" FontWeight="Bold" MinWidth="150"  ></TextBox>
 
-        <Button x:Name="One" Grid.Column="1" Grid.Row="2"  Width ="auto">1</Button>
-        <Button x:Name="Two" Grid.Column="2" Grid.Row="2" Width ="auto">2</Button>
-        <Button x:Name="Three" Grid.Column="3" Grid.Row="2" Width ="auto">3</Button>
-        <Button x:Name="Four" Grid.Column="1" Grid.Row="3" Width ="auto">4</Button>
-        <Button x:Name="Five" Grid.Column="2" Grid.Row="3" Width ="auto">5</Button>
-        <Button x:Name="Six" Grid.Column="3" Grid.Row="3" Width ="auto">6</Button>
-        <Button x:Name="Seven" Grid.Column="1" Grid.Row="4" Width ="auto">7</Button>
-        <Button x:Name="Eight" Grid.Column="2" Grid.Row="4" Width ="auto">8</Button>
-        <Button x:Name="Nine" Grid.Column="3" Grid.Row="4" Width ="auto">9</Button>
-        
-        <Button x:Name="Equals" Grid.Column="5" Grid.Row="1" Width ="auto">=</Button>
-        <Button x:Name="Addition" Grid.Column="4" Grid.Row="2" Width ="auto">+</Button>
-        <Button x:Name="Subtraktion" Grid.Column="5" Grid.Row="2" Width ="auto">-</Button>
-        <Button x:Name="Divided" Grid.Column="5" Grid.Row="3" Width ="auto">/</Button>
-        <Button x:Name="Muliply" Grid.Column="4" Grid.Row="3" Width ="auto">*</Button>
-        <Button x:Name="Clear" Grid.Column="5" Grid.Row="4" Width ="auto">C</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="One" Grid.Column="1" Grid.Row="2"  Width ="auto" Click="One_Click">1</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Two" Grid.Column="2" Grid.Row="2" Width ="auto" Click="Two_Click">2</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Three" Grid.Column="3" Grid.Row="2" Width ="auto" Click="Three_Click" >3</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Four" Grid.Column="1" Grid.Row="3" Width ="auto" Click="Four_Click">4</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Five" Grid.Column="2" Grid.Row="3" Width ="auto" Click="Five_Click" >5</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Six" Grid.Column="3" Grid.Row="3" Width ="auto" Click="Six_Click" >6</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Seven" Grid.Column="1" Grid.Row="4" Width ="auto"  Click="Seven_Click">7</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Eight" Grid.Column="2" Grid.Row="4" Width ="auto" Click="Eight_Click">8</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Nine" Grid.Column="3" Grid.Row="4" Width ="auto" Click="Nine_Click">9</Button>
+
+        <Button Style="{StaticResource Allbuttons}" x:Name="Equals" Grid.Column="5" Grid.Row="1" Width ="auto" Click="Equals_Click">=</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Addition" Grid.Column="4" Grid.Row="2" Width ="auto" Click="Addition_Click">+</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Subtraktion" Grid.Column="5" Grid.Row="2" Width ="auto" Click="Subtraktion_Click">-</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Divided" Grid.Column="5" Grid.Row="3" Width ="auto" Click="Divided_Click">/</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Muliply" Grid.Column="4" Grid.Row="3" Width ="auto" Click="Muliply_Click">*</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="Clear" Grid.Column="5" Grid.Row="4" Width ="auto" Click="Clear_Click">C</Button>
     </Grid>
 </Window>
