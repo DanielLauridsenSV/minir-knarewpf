@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:miniräknarewpf"
         mc:Ignorable="d" FontWeight="DemiBold" FontSize="17" BorderBrush="LightGray"
-        Title="Miniräknare" Height="230" Width="250" ResizeMode="CanResize">
+        Title="Miniräknare" Height="210" Width="250" ResizeMode="CanResize">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,21 +20,20 @@
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="15"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/> 
-
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
 
         </Grid.RowDefinitions>
         <TextBox x:Name="Results" Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Text="resultat" FontSize="45" 
-                 HorizontalAlignment="Center" FontWeight="Bold" MinWidth="170" 
+                 HorizontalAlignment="Center" FontWeight="Bold" MinWidth="170" MaxWidth="170" HorizontalScrollBarVisibility="Disabled" 
                  ></TextBox>
 
-        <Button Style="{StaticResource Allbuttons}" x:Name="One" Grid.Column="1" Grid.Row="2"  Width ="auto" Click="One_Click">1</Button>
+        <Button Style="{StaticResource Allbuttons}" x:Name="One" Grid.Column="1" Grid.Row="2" Click="One_Click">1</Button>
         <Button Style="{StaticResource Allbuttons}" x:Name="Two" Grid.Column="2" Grid.Row="2" Width ="auto" Click="Two_Click">2</Button>
         <Button Style="{StaticResource Allbuttons}" x:Name="Three" Grid.Column="3" Grid.Row="2" Width ="auto" Click="Three_Click" >3</Button>
         <Button Style="{StaticResource Allbuttons}" x:Name="Four" Grid.Column="1" Grid.Row="3" Width ="auto" Click="Four_Click">4</Button>
